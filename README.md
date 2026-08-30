@@ -152,6 +152,7 @@ docker run -p 8000:8000 -e LI_AT=… -e JSESSIONID=… linkedin-profile-api
 - **Visibility.** You only get what the backend account can see. Out-of-network
   profiles, or fields the target restricted, come back partial or empty.
 - **Not all fields on every profile** — anything the user didn't fill in is absent.
+- It is hosted on render free tier 
 
 ## Capturing a real response to finalise field mapping
 
