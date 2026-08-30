@@ -148,7 +148,7 @@ docker run -p 8000:8000 -e LI_AT=… -e JSESSIONID=… linkedin-profile-api
   `parser.py` are defensive but *will* shift; verify them against a live
   response. LinkedIn is also migrating profile reads to `/identity/dash/profiles`
   and a GraphQL endpoint whose `queryId`/`decorationId` rotates — hard-coding one
-  guarantees eventual breakage.
+  guarantees eventual breakage.This is the biggest pain point and trades robustness for  fidelity.
 - **Visibility.** You only get what the backend account can see. Out-of-network
   profiles, or fields the target restricted, come back partial or empty.
 - **Not all fields on every profile** — anything the user didn't fill in is absent.
